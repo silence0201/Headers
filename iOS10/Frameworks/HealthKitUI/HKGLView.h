@@ -6,7 +6,7 @@
 
 #import <GLKit/GLKView.h>
 
-@class BKSProcessAssertion, CADisplayLink, UIScreen;
+@class BKSProcessAssertion, CADisplayLink, NSTimer, UIScreen;
 
 @interface HKGLView : GLKView
 {
@@ -19,6 +19,7 @@
     _Bool _needsRender;
     unsigned int _latestDrawErrror;
     BKSProcessAssertion *_renderingAssertion;
+    NSTimer *_renderingAssertionTimer;
     _Bool _synchronizesWithCA;
     _Bool _shouldBypassApplicationStateChecking;
     float _preferredFramesPerSecond;
